@@ -6,7 +6,7 @@
 :root {
     --cor-primaria: #000000;
     --cor-secundaria: #f6f6f6;
-    --cor-terceiaria: #22d4fd;
+    --cor-terciaria: #22d4fd;
     --cor-hover: #272727;
 
     --fonte-primaria: "Krona One", sans-serif;
@@ -35,11 +35,11 @@ nav.cabecalho__menu {
 
 a.cabecalho__menu__link {
     background-color: var(--cor-primaria);
-    color: var(--cor-terceiaria);
+    color: var(--cor-terciaria);
     text-decoration: none;
     font-family: var(--fonte-secundaria);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 main.apresentacao {
@@ -47,10 +47,11 @@ main.apresentacao {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 5.1rem;
 }
 
 section.apresentacao__conteudo {
-    width: 650px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -58,16 +59,16 @@ section.apresentacao__conteudo {
 
 
 h1.apresentacao__conteudo__titulo {
-    font-size: 38px;
+    font-size: 2.30rem;
     font-family: var(--fonte-primaria);
 }
 
 strong.titulo-destaque {
-    color: var(--cor-terceiaria);
+    color: var(--cor-terciaria);
 }
 
 p.apresentacao__conteudo__texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
@@ -82,38 +83,61 @@ div.apresentacao__links {
 h2.apresentacao__links__subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
-a.apresentacao__links__link {
+a.apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
     gap: 16px;
     border-radius: 8px;
-    border: 2px solid var(--cor-terceiaria);
+    border: 2px solid var(--cor-terciaria);
     color: var(--cor-secundaria);
-    width: 378px;
+    width: 50%;
     padding: 21.5px 0px;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
 }
 
-a.apresentacao__links__link:hover {
+a.apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;
 }
 
 footer.rodape {
     color: var(--cor-primaria);
-    background-color: var(--cor-terceiaria);
+    background-color: var(--cor-terciaria);
     padding: 24px;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     position: relative;
     bottom:0;
     left:0;
     right:0;
+}
+
+@media (max-width: 980px) {
+    header.cabecalho {
+        padding: 10%;
+    }
+
+    nav.cabecalho__menu {
+        justify-content: center;
+    }
+    
+    main.apresentacao {
+        flex-direction: column-reverse;
+        padding: 5% 15%;
+    }
+
+    section.apresentacao__conteudo {
+        width: auto;
+    }
 }
